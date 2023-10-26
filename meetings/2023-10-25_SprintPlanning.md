@@ -1,6 +1,6 @@
 # Meeting Notes - 2023-10-25
 
-### Attendees:
+### Attendees: 
 - @Sizizii
 - @NirajYagnik
 - @Onkar-2803
@@ -20,12 +20,17 @@
 ### 2. Variable Naming Conventions:
 - @Onkar-2803 has made changes to variable names to ensure they abide by the ES6 convention.
 
-### 3. JavaScript Concept Revision:
+### 2. JavaScript Concept Revision:
 - It was collectively decided that we should take some time to revise our JavaScript concepts to ensure consistency and best practices across the codebase.
 
-### 4. Code Review:
+### 3 Code Review:
 - The team had an initial look at the code to identify any immediate areas of improvement or concerns.
 
+### 4. Divide Work to update variable names
+- We came up with a plan to compartmentalize the work among us.
+@Sizizii : toggleSummary, isBlockLevelDetail
+@NirajYagnik: getSummaries, loaded 
+@Onkar-2803: setTitle, findDetailFor
 ## Action Items:
 1. Team members to set aside time for JavaScript revision.
 2. Look at articles online for latest code conventions in JS
