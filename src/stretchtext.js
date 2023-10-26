@@ -76,11 +76,9 @@
 	}
 
 	function getSummaries(){
-		let results = [],
-			summaries;
-
+		const results = [];
 		// epub-type
-		summaries = document.querySelectorAll('[epub-type="stretchsummary"]');
+		const summaries = document.querySelectorAll('[epub-type="stretchsummary"]');
 		Array.prototype.forEach.call(summaries, function(result){
 			results.push(result);
 		});
@@ -119,3 +117,4 @@
 		loaded();
 	}
 })();
+
