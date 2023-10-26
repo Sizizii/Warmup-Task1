@@ -29,8 +29,11 @@
 ### 4. Divide Work to update variable names
 - We came up with a plan to compartmentalize the work among us.
 @Sizizii : toggleSummary, isBlockLevelDetail
+
 @NirajYagnik: getSummaries, loaded 
+
 @Onkar-2803: setTitle, findDetailFor
+
 ## Action Items:
 1. Team members to set aside time for JavaScript revision.
 2. Look at articles online for latest code conventions in JS
