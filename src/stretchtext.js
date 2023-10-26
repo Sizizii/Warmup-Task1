@@ -15,6 +15,7 @@
         	window.setTimeout(callback, 1000 / 60);
         };
 
+
 	function toggleSummary(evt){
 		// Prevent the text from being selected if rapidly clicked.
 		evt.preventDefault();
