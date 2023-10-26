@@ -76,7 +76,7 @@
 	}
 
 	function getSummaries(){
-		var results = [],
+		let results = [],
 			summaries;
 
 		// epub-type
@@ -94,7 +94,7 @@
 		return results;
 	}
 
-	var loadedCalled = false;
+	let loadedCalled = false;
 	function loaded(){
 		if (loadedCalled){ return; }
 		loadedCalled = true;
