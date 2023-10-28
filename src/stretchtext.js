@@ -1,4 +1,14 @@
-(function(){
+// ###### Change all the functions to arrow functions
+// ###### Change car to let and const
+// ###### Use template literals for string concatenation.
+// ###### Use const for function declarations to prevent accidental reassignment.
+// ###### Use object destructuring to simplify object property access
+// ###### Use querySelector and querySelectorAll for simpler DOM element selection.
+// ###### Use for...of for iterating over arrays
+
+(function(){ // ###### Change to Modular function instead of IIFY
+	
+	//###### Remove 'use' strict as ES6 modules are always in strict mode
 	'use strict';
 
 	const TITLE_WHEN_CLOSED = 'Expand';
@@ -96,7 +106,7 @@
 
 	var loadedCalled = false;
 	function loaded(){
-		if (loadedCalled){ return; }
+		if (loadedCalled){ return; } //Remove as it is constant
 		loadedCalled = true;
 		// FIXME(slightlyoff): Add global handlers instead of one per item.
 		getSummaries().forEach(function(summary){
