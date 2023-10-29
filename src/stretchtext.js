@@ -1,6 +1,5 @@
 /*
    NOT sure - Use object destructuring to simplify object property access
-   NOT sure - Use querySelector and querySelectorAll for simpler DOM element selection.
    Haved used the spread operator -> Use for...of for iterating over arrays
  */
 
