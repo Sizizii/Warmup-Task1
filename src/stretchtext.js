@@ -8,7 +8,7 @@
 
 (function(){ // ###### Change to Modular function instead of IIFY
 	
-	//###### Remove 'use' strict as ES6 modules are always in strict mode
+	//###### Remove 'use' strict as ES6 modules are always in strict mode   
 	'use strict';
 
 	const TITLE_WHEN_CLOSED = 'Expand';
