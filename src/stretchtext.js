@@ -83,7 +83,8 @@
         const id = summary.getAttribute('href').replace(/^#/, '');
         const detail = document.getElementById(id);
         if (!detail && window.console) {
-          console.error('No StretchText details element with ID: ' + id);
+          // template literals
+          console.error('No StretchText details element with ID: ${id}');
         }
         return detail;
       } else {
