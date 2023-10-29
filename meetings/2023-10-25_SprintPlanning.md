@@ -28,6 +28,7 @@
 
 ### 4. Divide Work to update variable names
 - We came up with a plan to compartmentalize the work among us.
+
 @Sizizii : toggleSummary, isBlockLevelDetail
 
 @NirajYagnik: getSummaries, loaded 
