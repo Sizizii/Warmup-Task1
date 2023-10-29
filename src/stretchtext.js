@@ -28,7 +28,8 @@
         window.setTimeout(callback, 1000 / 60);
       };
   
-    function toggleSummary (evt) {
+    // function toggleSummary (evt) {
+    const toggleSummary = evt =>{
       // Prevent the text from being selected if rapidly clicked.
       evt.preventDefault();
   
@@ -58,12 +59,14 @@
     }
   
     /* Return boolean: if the strechtext starts from a new paragraph */
-    function isBlockLevelDetail (summary) {
+    // function isBlockLevelDetail (summary) {
+    const isBlockLevelDetail = summary => {
       return summary.nodeName.toLowerCase() === 'a';
     }
   
     /* Set the value of the attribute 'title' on element summary */
-    function setTitle (summary, title) {
+    // function setTitle (summary, title) {
+    const setTitle = (summary, title) =>{
       // If the user placed a manual title on the summary leave it alone.
   
       // if (summary.hasAttribute('title')) {
@@ -78,7 +81,8 @@
     }
   
     /* Find stretchtext detail for a summary */
-    function findDetailFor (summary) {
+    // function findDetailFor (summary) {
+    const findDetailFor = summary => {
       if (isBlockLevelDetail(summary)) {
         const id = summary.getAttribute('href').replace(/^#/, '');
         const detail = document.getElementById(id);
@@ -97,7 +101,8 @@
     }
   
     /* Retrieve all summaries (10 in total)*/
-    function getSummaries () {
+    // function getSummaries () {
+    const getSummaries = () => {
       // var results = [], summaries;
   
       // epub-type
@@ -125,7 +130,8 @@
     let loadedCalled = false;
   
     /* add handlers for summaries when HTML doc has been parsed*/
-    function loaded () {
+    // function loaded () {
+    const loaded = () => {
       if (loadedCalled) { return; }
       loadedCalled = true;
       // FIXME(slightlyoff): Add global handlers instead of one per item.
