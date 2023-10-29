@@ -8,14 +8,14 @@
 
 (function(){ // ###### Change to Modular function instead of IIFY
 	
-	//###### Remove 'use' strict as ES6 modules are always in strict mode
+	//###### Remove 'use' strict as ES6 modules are always in strict mode   
 	'use strict';
 
 	const TITLE_WHEN_CLOSED = 'Expand';
 	const TITLE_WHEN_OPEN = 'Collapse';
 
 	// requestAnimationFrame shimming.
-	var requestAnimationFrame =
+	let requestAnimationFrame =
 		window.requestAnimationFrame       ||
         window.webkitRequestAnimationFrame ||
         window.mozRequestAnimationFrame    ||
@@ -30,8 +30,8 @@
 		// Prevent the text from being selected if rapidly clicked.
 		evt.preventDefault();
 
-		var summary = evt.target;
-		var detail = findDetailFor(summary);
+		let summary = evt.target;
+		let detail = findDetailFor(summary);
 		if (!detail){ return; }
 
 		// CSS Transitions don't work as expected on things set to 'display: none'. Make the
@@ -70,14 +70,14 @@
 
 	function findDetailFor(summary){
 		if (isBlockLevelDetail(summary)){
-			var id = summary.getAttribute('href').replace(/^#/, '');
-			var detail = document.getElementById(id);
+			let id = summary.getAttribute('href').replace(/^#/, '');
+			let detail = document.getElementById(id);
 			if (!detail && window.console){
 				console.error('No StretchText details element with ID: ' + id);
 			}
 			return detail;
 		} else {
-			var detail = summary.nextElementSibling;
+			let detail = summary.nextElementSibling;
 			if (!detail && window.console){
 				console.error('No StretchText details element found for: ', summary);
 			}
@@ -86,8 +86,7 @@
 	}
 
 	function getSummaries(){
-		var results = [],
-			summaries;
+		let results = [], summaries;
 
 		// epub-type
 		summaries = document.querySelectorAll('[epub-type="stretchsummary"]');
@@ -104,9 +103,9 @@
 		return results;
 	}
 
-	var loadedCalled = false;
+	let loadedCalled = false;
 	function loaded(){
-		if (loadedCalled){ return; } //Remove as it is constant
+		if (loadedCalled){ return; } ////###### Remove as it is constant
 		loadedCalled = true;
 		// FIXME(slightlyoff): Add global handlers instead of one per item.
 		getSummaries().forEach(function(summary){
